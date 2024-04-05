@@ -88,7 +88,7 @@
                             </div>
                         </div>
                         <div class="col-span-12 lg:col-span-6" data-aos="fade-up" data-aos-delay="300">
-                            <form id="contactForm" onsubmit="return sendEmail()" class="grid grid-cols-12 gap-[18px]">
+                            <form  action="https://formspree.io/f/mnqeoqzz" method="POST" class="grid grid-cols-12 gap-[18px]">
                                 <div class="col-span-12 md:col-span-6">
                                     <label class="text-sm font-normal font-Inter leading-tight mb-3 block" for="name">Name</label>
                                     <input
@@ -240,45 +240,5 @@
 
         <!-- Activation JS -->
         <script src="assets/js/main.js"></script>
-        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-        <script>
-            (function () {
-                emailjs.send("mohammedadilakbar@gmail.com"); // Initialize EmailJS with your user ID
-            })();
-
-            function sendEmail() {
-                const form = document.getElementById("contactForm");
-                const name = form.name.value;
-                const Email = form.email.value;
-                const Phone = form.phone.value;
-                const Subject = form.subject.value;
-                const Message = form.message.value;
-
-                if (!name || !email || !phone || !subject || !message) {
-                    alert("Please fill in all fields.");
-                    return false;
-                }
-
-                const templateParams = {
-                    from_name: name,
-                    from_email: email,
-                    from_phone: phone,
-                    from_subject: ubject,
-                    message: message,
-                };
-
-                emailjs.send("mohammedadilakbar@gmail.com", "mohammedadilakbar@gmail.com", templateParams).then(
-                    function (response) {
-                        alert("Your message has been sent successfully!");
-                        form.reset();
-                    },
-                    function (error) {
-                        alert("Oops... An error occurred, please try again later.");
-                    }
-                );
-
-                return false;
-            }
-        </script>
     </body>
 </html>
