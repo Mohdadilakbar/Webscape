@@ -1,1 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<title>Instafeed on Your Website</title>
+	<style type="text/css">
+		a img{ 
+			width: 25%;
+		}
+	</style>
+</head>
+<body>
+	<h1 style="text-align: center">Show Instagram Feed on your Website</h1>
+    	<div id="instafeed-container"></div>
 
+
+
+	<script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
+	<script type="text/javascript">
+	var userFeed = new Instafeed({
+		get: 'user',
+		target: "instafeed-container",
+    	resolution: 'low_resolution',
+		accessToken: 'IGQWRQUUdjV09aa3FEazZAHandHWmNVb1p0WW1Od3hoaFNEaTdtM2dvazdwaU1iTnpQSm00QUc4aU44M3U0MFFOWmV2NEhTX3pzTWl4U0ZATaUFQRFdVVi1yQU84bUxEUnpHdTlnQW51UTVqQU1RdlpSb192akc3TlUZD'
+	});
+	userFeed.run();
+	</script>
+</body>
+</html>
